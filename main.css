@@ -1,0 +1,17 @@
+.phone-img{
+  float: left;
+  height: 250px;
+  margin: -0.5em 1em 1.5em 0;
+  overflow: hidden;
+  padding-bottom: 1em;
+  position: relative;
+  width: 250px;
+}
+.phones li {
+  clear: both;
+  height: 275px;
+  padding-top: 15px;
+}
+.button1{
+  margin-bottom: 50px;
+}

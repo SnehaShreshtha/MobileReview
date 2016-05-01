@@ -1,0 +1,40 @@
+<!Doctype html/> 
+ <html> 
+
+ <head> 
+  <title>Mobile-Details</title> 
+  <meta charset='utf-8' /> 
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="app.js"></script> 
+ </head> 
+
+ <body ng-app="mobile"> 
+
+ <div class="container">
+  
+  <h1 class="jumbotron text-center"> Mobile Review </h1>
+
+  <form class="form-group" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+      <label for="form-input1">Mobile Name:</label>
+      <input type="textarea" id="form-input1" ng-model="reviewCtrl.prod.name"></input><br>
+      <label for="form-input2">Image URL:</label>
+      <input type="textarea" id="form-input2" ng-model="reviewCtrl.prod.imageUrl"></input><br>
+      <label for="form-input3">Description:</label>
+      <input type="textarea" id="form-input3" ng-model="reviewCtrl.prod.snippet"></input><br>
+      <input class="btn-primary" type="submit" value="Save-Review"><br>
+     <blackquote class="form-group">
+        <b>Mobile Name:{{reviewCtrl.prod.name}}</b><br>
+        <b>Image URL:{{reviewCtrl.prod.imageUrl}}</b><br>
+        <b>Description:{{reviewCtrl.prod.snippet}}</b><br>      
+     </blackquote>
+
+     </form>
+
+</div>
+
+ </body> 
+
+ </html> 

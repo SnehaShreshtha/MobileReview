@@ -1,0 +1,40 @@
+<!Doctype html/> 
+ <html> 
+
+ <head> 
+  <title>Mobile-Details</title> 
+  <meta charset='utf-8' /> 
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="app.js"></script> 
+ </head> 
+
+ <body ng-app="mobile"> 
+
+ <div class="container">
+  
+  <h1 class="jumbotron text-center"> Mobile Review </h1>
+
+  <div class="row button1">
+    <a href="/review.html">
+       <button class="btn-primary col-sm-offset-10" type="button">Add Latest Mobile</button>
+    </a>
+  </div>
+
+  <div class="row phones" ng-controller="mobile-review as rev">  
+       <ul> 
+          <li class="list-unstyled col-sm-10" ng-repeat="product in rev.products">
+             <a href="#"><img class="phone-img" ng-src={{product.imageUrl}}/></a>
+             <a href="#">{{product.name}}</a>
+             <p>{{product.snippet}}</p>
+          </li>  
+       </ul>
+  </div>
+
+</div>
+
+ </body> 
+
+ </html> 
